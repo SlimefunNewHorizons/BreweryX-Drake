@@ -192,7 +192,7 @@ tasks {
     }
 
     runServer {
-        minecraftVersion("26.1.2")
+        minecraftVersion("26.2")
     }
 
     register("publishToDiscord") {
@@ -272,7 +272,7 @@ modrinth {
         "1.20.6", "1.21", "1.21.1", "1.21.2",
         "1.21.3", "1.21.4", "1.21.5", "1.21.6",
         "1.21.7", "1.21.8", "1.21.9", "1.21.10",
-        "1.21.11"
+        "1.21.11", "26.1.2", "26.2"
     )
     changelog.set(readChangeLog())
 }
@@ -290,7 +290,7 @@ hangarPublish {
                 // TODO: Ask in paper discord
                 //url.set("https://modrinth.com/plugin/breweryx/versions")
                 jar.set(tasks.shadowJar.flatMap { it.archiveFile })
-                platformVersions.set(listOf("1.20.x", "1.21.x"))
+                platformVersions.set(listOf("1.20.x", "1.21.x", "26.1.2", "26.2"))
             }
         }
     }
