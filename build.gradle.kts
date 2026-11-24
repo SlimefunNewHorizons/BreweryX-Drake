@@ -41,12 +41,13 @@ plugins {
 group = "com.dre.brewery"
 version = "3.7.0"
 
-val langVersion: Int = 21
+val langVersion: Int = 25
 val runTaskJavaVersion: Int = 25
 val encoding: String = "UTF-8"
 
 repositories {
-    // DrakesCraft publica su fork relocalizado de Slimefun en el repositorio local.
+    // DrakesCraft publica su fork de Slimefun en el portal de builds Maven.
+    maven("https://pack.drakescraft.cl/builds/maven/")
     mavenLocal()
     mavenCentral()
     maven("https://repo.jsinco.dev/releases") // UniversalScheduler
@@ -89,8 +90,8 @@ dependencies {
     implementation("org.mongodb:mongodb-driver-sync:5.3.0-beta0")
     compileOnly("org.apache.logging.log4j:log4j-core:2.23.1")
     // Lombok
-    compileOnly("org.projectlombok:lombok:1.18.30")
-    annotationProcessor("org.projectlombok:lombok:1.18.30")
+    compileOnly("org.projectlombok:lombok:1.18.46")
+    annotationProcessor("org.projectlombok:lombok:1.18.46")
     // Okaeri configuration
     implementation("eu.okaeri:okaeri-configs-yaml-snakeyaml:5.0.5") {
         exclude("org.yaml", "snakeyaml")
